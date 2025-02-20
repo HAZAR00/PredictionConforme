@@ -40,71 +40,52 @@ Projet academique en binome en prediction confrome visant à quantifier les l’
   - Ouvrir un compte GitHub, créer un dépôt, ajouter le binôme, et compléter le Readme.md.
   - explorer les outils 
 
-#### Séance 2
+#### Séance 2 + 3
 - **Objectifs** : Comprendre les modèles pré-entraînés et les tâches de régression/classification.
 - **Actions** :
-  - Étudier les modèles pré-entraînés disponibles.
-  - Choisir un modèle adapté à une tâche de régression ou de classification.
-
-#### Séance 3
+  - Se familiariser avec l'environnement de programmation.
+  - Entraîner un modéle de régression linéaire en 1D.
+  - Trouver un modéle pré-entrainé de régression linéaire en nD.
+  - Trouver un modéle pré-entrainé de classification .
+  
+#### Séance 4 + 5
 - **Objectifs** : Énoncer et démontrer le résultat de prédiction conforme.
 - **Actions** :
+  - Lire l'article "A gentle introduction to conformal prediction and distribution-free uncertainty quantification"
   - Étudier la théorie de la prédiction conforme.
   - Démontrer le résultat de prédiction conforme dans sa forme la plus simple.
 
-#### Séance 4
-- **Objectifs** : Appliquer la prédiction conforme à un modèle pré-entraîné.
+#### Séance 6 + 7
+- **Objectifs** : Appliquer la prédiction conforme aux modéles choisis.
 - **Actions** :
   - Utiliser un ensemble de calibration pour ajuster les prédictions du modèle.
   - Implémenter la prédiction conforme sur le modèle choisi.
 
-#### Séance 5
+#### Séance 8
 - **Objectifs** : Comparer les intervalles de prédiction avec différents scores de non-conformité.
 - **Actions** :
   - Calculer les intervalles de prédiction avec différents scores de non-conformité.
   - Comparer les résultats obtenus.
 
-#### Séance 6
+#### Séance 9
 - **Objectifs** : Visualiser les intervalles de prédiction.
 - **Actions** :
   - Créer des graphiques pour visualiser les intervalles de prédiction.
   - Analyser les résultats visuels.
 
-#### Séance 7
+#### Séance 10 
 - **Objectifs** : Révision et ajustements.
 - **Actions** :
   - Revoir les étapes précédentes et ajuster les modèles ou les méthodes si nécessaire.
-  - Préparer une présentation des résultats obtenus.
 
-#### Séance 8
-- **Objectifs** : Préparation finale.
+#### Séance 11
+- **Objectifs** : Préparation  de la présentation finale.
 - **Actions** :
   - Finaliser les rapports et les présentations.
   - S'assurer que toutes les actions identifiées sont complétées.
 
-#### Séance 9
+#### Séance 12
 - **Objectifs** : Présentation et évaluation.
 - **Actions** :
-  - Présenter les résultats du projet.
-  - Répondre aux questions et discuter des résultats avec l'encadrant.
+  - Présenter les résultats du projet
 
-### Création du Répertoire GitHub
-
-1. **Ouvrir un Compte GitHub** : Si vous n'avez pas déjà un compte GitHub, créez-en un.
-
-2. **Créer un Dépôt** :
-   - Allez sur GitHub et cliquez sur "New" pour créer un nouveau dépôt.
-   - Donnez un nom pertinent au dépôt, par exemple "PredictionConformeBE".
-   - Ajoutez une description courte du projet.
-
-3. **Ajouter un Collaborateur** :
-   - Allez dans les paramètres du dépôt.
-   - Ajoutez l'autre personne du binôme comme collaborateur.
-
-4. **Compléter le Readme.md** :
-   - Ajoutez des informations de base sur le projet dans le fichier Readme.md, comme une description du projet, les objectifs, et les étapes à suivre.
-
-5. **Créer des Issues** :
-   - Pour chaque action identifiée, créez une issue dans le dépôt GitHub. Cela permettra de suivre l'avancement du projet et de s'assurer que toutes les tâches sont complétées.
-
-Si vous avez des doutes ou des questions sur l'un de ces points, n'hésitez pas à demander de l'aide !
