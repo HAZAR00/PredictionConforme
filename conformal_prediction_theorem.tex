@@ -27,4 +27,8 @@ Théorème :Soient :
  *
  * q le ⌈(n+1)(1−α)⌉quantile des scores de calibration s1 = s(X1, Y1), ..., sn = s(Xn, Yn)
 \section{Conclusion}
+deux fcts qui prennent en entrée les models et ensemble de test ( 1 ere calcule la taille de l'intervalle moyen( pour la regression et la cardinalite pour  la classification)(Éeme clacule empiriquement que ds 1-alpha des cas on a bien ce quii est prédit est ds l'intervalle ))
+on utilise  np.quantile ( il faut utiliser la bonne method(regarder dcoumentation) )
+et il faut appliquer prediction conforme sur le model ( o caclcule scores sur calibration)
+intervel x+_quantile et l'autre on prend ceux dui soft max en aqequation avec le quantile
 \end{document}
