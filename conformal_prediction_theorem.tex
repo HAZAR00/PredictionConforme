@@ -19,12 +19,57 @@
 
 \maketitle
 
-\section{Introduction}
-Le but de ce document est démontrer le théorème de la prédiction conforme.
-\section{Prédiction Conforme}
-Théorème :Soient : 
- * (Xi, Yi)i=1,...,n et (Xtest, Ytest), variables aléatoires idientiques et independentes.
- *
+\section{Un objectif ambitieux ?}
+
+L'objectif fondamental de la prédiction conforme est le suivant. Soit $(X_i, Y_i) \sim P$, pour $i = 1, \dots, n$, une suite de paires i.i.d. (caractéristiques et réponses), issues d'une distribution $P$ sur $\mathcal{X} \times \mathcal{Y}$. Par souci de clarté, on peut supposer que l'espace des caractéristiques est $\mathcal{X} = \mathbb{R}^d$, et que l'espace des réponses est $\mathcal{Y} = \mathbb{R}$, bien que cela ne soit pas nécessaire en général. Soit $\alpha \in (0, 1)$ un niveau d'erreur nominal. L'objectif est de construire une \emph{bande de prédiction} :
+
+\[
+\hat{C}_n : \mathcal{X} \rightarrow \{\text{sous-ensembles de } \mathcal{Y}\}
+\]
+
+telle que, pour une nouvelle paire $(X_{n+1}, Y_{n+1}) \sim P$, on ait :
+
+\begin{equation}
+\mathbb{P}(Y_{n+1} \in \hat{C}_n(X_{n+1})) \geq 1 - \alpha,
+\end{equation}
+
+où la probabilité est prise sur l'ensemble des données $(X_i, Y_i)$ pour $i = 1, \dots, n+1$.
+
+D'une part, sans faire d'hypothèse sur $P$ ni recourir à des approximations asymptotiques, cela peut sembler être un objectif très difficile à atteindre. D'autre part, on peut facilement construire une procédure triviale qui satisfait cette condition ; par exemple :
+
+\[
+\hat{C}_n(X_{n+1}) =
+\begin{cases}
+\mathcal{Y} & \text{avec une probabilité } 1 - \alpha \\
+\emptyset & \text{avec une probabilité } \alpha
+\end{cases}
+\]
+
+aurait toujours une couverture exacte de $1 - \alpha$, c’est-à-dire que l’équation (1) serait satisfaite avec égalité.
+
+La véritable question est donc la suivante (même si elle reste encore quelque peu vague) : peut-on satisfaire (1) avec un échantillon fini, sans faire d’hypothèse sur $P$, et de manière \emph{non triviale} ? En particulier, on souhaiterait que notre stratégie s’adapte à la difficulté du problème : plus il est facile de prédire $Y_{n+1}$ à partir de $X_{n+1}$, plus l'ensemble $\hat{C}_n(X_{n+1})$ devrait être petit.
+
+
+\section{Résultat de la Prédiction Conforme}
+Théorème : Soit pour $i= 1,...,n$ ,  
+ $(X_i, Y_i) \sim P_{\mathcal{X}\mathcal{Y}}$ une suite de couples de variables aléatoires, indépendates et identiquement distributées. $(X_i, Y_i)$ sont à valeurs dans X*Y. on definit egalement alpha, le niveau d'erreur pour notre prédiction
+ On construit C chapeau tel que:
+ 
+ 
+ C chapeau: ksi -> ensemble de partie de \mathcal{Y}
+
+ ayant pour propriété, pour une nouvelle paire de test (X_test,Y_test) sim P_ksi Y
+
+ C(X_test) = {y appartenant \mathcal{Y}, s(X_test,y)< q}
+ 
+ 
+
+ on a donc 
+ probabilité({Y_test appartient à C chapeau(X_test)}) >= 1-alpha
+
+
+ 
+ On définit alors les scores de cal
  * q le ⌈(n+1)(1−α)⌉quantile des scores de calibration s1 = s(X1, Y1), ..., sn = s(Xn, Yn)
 \section{Conclusion}
 deux fcts qui prennent en entrée les models et ensemble de test ( 1 ere calcule la taille de l'intervalle moyen( pour la regression et la cardinalite pour  la classification)(Éeme clacule empiriquement que ds 1-alpha des cas on a bien ce quii est prédit est ds l'intervalle ))
