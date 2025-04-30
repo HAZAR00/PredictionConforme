@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{article}%classe du document: rapport, article, livre,...
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel} %pour écrire en français et utiliser les accents facilement.
+\usepackage{amsmath}%pour ecrire des maths
+\usepackage{amssymb}%pour utiliser des symboles spécifiques
+\usepackage{graphicx}%package pour manipuler des graphiques
+\usepackage{hyperref}
+\usepackage{color}
+
+% Title and Author
+\title{Definitions}
+\author{Hazar HAMOUDA - Mohamed MEGDICHE}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Fonction score $s$} 
+
+
+On definit tout d'abord les objets mathematiques qui  nous seront utile dans l'ennonce du theoreme de la prediction conforme : 
+
+Une \emph{fonction de score} (ou fonction de non-conformité) est une application
+\[
+s : \mathcal{X} \times \mathcal{Y} \rightarrow \mathbb{R}
+\]
+qui mesure à quel point une paire $(x, y)$ est atypique ou en désaccord avec les données d'entraînement ou le modèle prédictif.
+
+Un score élevé $s(x, y)$ indique que la valeur $y$ est peu plausible compte tenu de $x$, selon le modèle ou une heuristique choisie. Cette fonction est utilisée pour comparer de nouveaux exemples avec les exemples de calibration, indépendamment de la distribution sous-jacente.
+\section{ Le quantile $\hat{q}$}
+     avec $\hat{q}$ comme le quantile d'ordre $\left\lceil \frac{(n+1)(1 - \alpha)}{n} \right\rceil$ des scores de calibration $s_1 = s(X_1, Y_1), \dots, s_n = s(X_n, Y_n)$.
+\section{Ensemble de prédiction conforme $\hat{C}_n(x)$}
+
+
+    avec : 
+    \[
+    \hat{C}_n : \mathcal{X} \rightarrow \left\{ \text{sous-ensembles de } \mathcal{Y} \right\}
+    \]
+    qui associe à chaque entrée $x \in \mathcal{X}$ un ensemble $\hat{C}_n(x) \subseteq \mathcal{Y}$ représentant les valeurs plausibles de sortie $y$.
+    
+    Cet ensemble est défini par :
+    \[
+    \hat{C}_n(x) = \left\{ y \in \mathcal{Y} : s(x, y) \leq \hat{q} \right\}
+    \]
+    
+    Autrement dit, pour une nouvelle observation $x$, on considère toutes les sorties $y$ dont le score est inférieur ou égal au seuil $\hat{q}$, déterminé à partir des données de calibration. 
+    
+
+\end{document}
