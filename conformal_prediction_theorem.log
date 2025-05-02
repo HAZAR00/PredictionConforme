@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.25)  30 APR 2025 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.25)  2 MAY 2025 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./conformal_prediction_theorem.tex
+**conformal_prediction_theorem.tex
 (./conformal_prediction_theorem.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
@@ -44,9 +44,9 @@ Package: babel 2022/01/26 3.70 The Babel package
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2021/07/20 v3.5m French support from the babel system
 Package babel Info: Hyphen rules for 'acadian' set to \l@french
-(babel)             (\language44). Reported on input line 91.
+(babel)             (\language43). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language44). Reported on input line 92.
+(babel)             (\language43). Reported on input line 92.
 \FB@nonchar=\count195
 Package babel Info: Making : an active character on input line 430.
 Package babel Info: Making ; an active character on input line 431.
@@ -389,27 +389,84 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (18.69081pt too wide) in paragraph at lines 24--25
-[]\T1/cmr/m/n/12 L'objectif fon-da-men-tal de la pr�-dic-tion conforme est le s
-ui-vant. Soit $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; Y[]\OT1/cmr/m/n/12 ) \OMS
-/cmsy/m/n/12 ^^X
+
+! LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...eau: ksi -> ensemble de partie de \mathcal
+                                                  {Y}
+? q
+OK, entering \batchmode...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.30 ...été, pour une nouvelle paire de test (X_
+                                                  test,Y_test) sim P_ksi Y
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.31 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (11.77026pt too wide) in paragraph at lines 30--31
+[]\T1/cmr/m/n/12 ayant pour pro-pri�t�, pour une nou-velle paire de test (X$[]\
+OML/cmm/m/it/12 est; Y[]est\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 simP[]siY$ 
  []
 
-[1
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32  C(X_
+          test) = {y appartenant \mathcal{Y}, s(X_test,y)< q}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.33 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-LaTeX Warning: Command \' invalid in math mode on input line 56.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.37  probabilité({Y_
+                      test appartient à C chapeau(X_test)}) >= 1-alpha
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 56.
+LaTeX Warning: Command \` invalid in math mode on input line 37.
 
+! Extra }, or forgotten $.
+l.37 ...�({Y_test appartient à C chapeau(X_test)}
+                                                  ) >= 1-alpha
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-LaTeX Warning: Command \` invalid in math mode on input line 56.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-
-LaTeX Warning: Command \` invalid in math mode on input line 56.
-
+Missing character: There is no � in font cmr12!
 
 ! LaTeX Error: Unicode character ⌈ (U+2308)
                not set up for use with LaTeX.
@@ -418,11 +475,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58  * q le ⌈
+l.42  * q le ⌈
                 (n+1)(1−α)⌉quantile des scores de calibration s1 = s(X1...
 
-? q
-OK, entering \batchmode...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 ! LaTeX Error: Unicode character − (U+2212)
                not set up for use with LaTeX.
@@ -431,7 +489,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58  * q le ⌈(n+1)(1−
+l.42  * q le ⌈(n+1)(1−
                           α)⌉quantile des scores de calibration s1 = s(X1...
 
 You may provide a definition with
@@ -445,7 +503,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58  * q le ⌈(n+1)(1−α
+l.42  * q le ⌈(n+1)(1−α
                             )⌉quantile des scores de calibration s1 = s(X1...
 
 You may provide a definition with
@@ -459,86 +517,162 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58  * q le ⌈(n+1)(1−α)⌉
+l.42  * q le ⌈(n+1)(1−α)⌉
                                 quantile des scores de calibration s1 = s(X1...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 \section
-             {Conclusion}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 44.
 
-Overfull \hbox (394.35004pt too wide) in paragraph at lines 54--59
-\T1/cmr/m/n/12 bu�es � va-leurs dans ksi*Y1. De plus $\OT1/cmr/m/n/12 (\OML/cmm
-/m/it/12 X[]; Y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 Ondfinitgalementalphavaleurs
-dans\OT1/cmr/m/n/12 [0; 1]\OML/cmm/m/it/12 ; leniveaud[]erreurqu[]ontolrepourla
-predictionL[]interetlaprediction \OMS/cmsy/m/n/12 ^^C
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 44.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 56.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 58.
+
+
+Overfull \hbox (39.06271pt too wide) in paragraph at lines 76--76
+[]\T1/cmr/bx/n/17.28 application du theo-reme de la pr�-dic-tion conforme 
  []
 
 
-Overfull \hbox (13.96286pt too wide) in paragraph at lines 54--59
-\OML/cmm/m/it/12 qle\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 + 1)(1)
-\OML/cmm/m/it/12 quantiledesscoresdecalibrations\OT1/cmr/m/n/12 1 = \OML/cmm/m/
-it/12 s\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; Y
-\OT1/cmr/m/n/12 1)\OML/cmm/m/it/12 ; :::; sn \OT1/cmr/m/n/12 = \OML/cmm/m/it/12
- s\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Xn; Yn\OT1/cmr/m/n/12 )$ 
- []
+! LaTeX Error: Environment theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \begin{theorem}
+                    [Prédiction conforme pour la régression linéaire]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100     \end{theorem}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103     \begin{theorem}
+                         [Prédiction conforme pour la classification]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ [2]
+
+! LaTeX Error: \begin{document} ended by \end{theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134         \end{theorem}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.63 intervel x+_
-                 quantile et l'autre on prend ceux dui soft max en aqequatio...
+l.142     intervel x+_
+                      quantile et l'autre on prend ceux dui soft max en aqeq...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.64 \end{document}
-                   
+l.143 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
- [2] (./conformal_prediction_theorem.aux)
-Package rerunfilecheck Info: File `conformal_prediction_theorem.out' has not ch
-anged.
-(rerunfilecheck)             Checksum: D8BED408AD10E11EB6C5484E2B0F16EA;404.
- ) 
+ [3] (./conformal_prediction_theorem.aux)
+
+Package rerunfilecheck Warning: File `conformal_prediction_theorem.out' has cha
+nged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `conformal_prediction_theorem.out':
+(rerunfilecheck)             Before: 4149A46F5DE7D3ED48193E7FF8F23B11;1344
+(rerunfilecheck)             After:  7E984770A93B8F1332A6D2B47FA0FC7F;1177.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 37 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 11314 strings out of 478287
- 175671 string characters out of 5849289
- 482241 words of memory out of 5000000
- 29364 multiletter control sequences out of 15000+600000
- 482566 words of font info for 65 fonts, out of 8000000 for 9000
+ 11328 strings out of 478287
+ 175836 string characters out of 5849289
+ 480244 words of memory out of 5000000
+ 29373 multiletter control sequences out of 15000+600000
+ 484112 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,63p,638b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-frm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on conformal_prediction_theorem.pdf (2 pages, 158299 bytes).
+ 60i,6n,63p,372b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section.7} has been referenced but 
+does not exist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfti1200.pfb>
+Output written on conformal_prediction_theorem.pdf (3 pages, 199945 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
