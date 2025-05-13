@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.14)  14 MAY 2025 00:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.14)  14 MAY 2025 00:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count338
 \l__pdf_internal_box=\box75
 )
-No file essai-beamer.aux.
+(./essai-beamer.aux)
 \openout1 = `essai-beamer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -746,6 +746,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -818,6 +819,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
 LaTeX Info: Redefining \nameref on input line 18.
+
+(./essai-beamer.out) (./essai-beamer.out)
 \@outlinefile=\write5
 \openout5 = `essai-beamer.out'.
 
@@ -905,9 +908,9 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \degres on input line 18.
 LaTeX Info: Redefining \up on input line 18.
-
-No file essai-beamer.nav.
+ (./essai-beamer.nav)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -968,20 +971,14 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 
 (./essai-beamer.aux)
-
-Package rerunfilecheck Warning: File `essai-beamer.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `essai-beamer.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `essai-beamer.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23378 strings out of 478287
- 447546 string characters out of 5849289
- 718031 words of memory out of 5000000
- 41089 multiletter control sequences out of 15000+600000
+ 23409 strings out of 478287
+ 447857 string characters out of 5849289
+ 718127 words of memory out of 5000000
+ 41112 multiletter control sequences out of 15000+600000
  486279 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,122p,392b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1000,7 +997,7 @@ re/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1
 s1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sftt1095.pfb>
-Output written on essai-beamer.pdf (9 pages, 180612 bytes).
+Output written on essai-beamer.pdf (9 pages, 180717 bytes).
 PDF statistics:
  334 PDF objects out of 1000 (max. 8388607)
  282 compressed objects within 3 object streams
