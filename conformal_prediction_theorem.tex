@@ -19,27 +19,43 @@
 
 \maketitle
 
-\section{Résultat de la Prédiction Conforme générale}
-Théorème : Soit pour $i= 1,...,n$ ,  
- $(X_i, Y_i) \sim P_{\mathcal{X}\mathcal{Y}}$ une suite de couples de variables aléatoires, indépendates et identiquement distributées. $(X_i, Y_i)$ sont à valeurs dans X*Y. on definit egalement alpha, le niveau d'erreur pour notre prédiction
- On construit C chapeau tel que:
- 
- 
- C chapeau: ksi -> ensemble de partie de \mathcal{Y}
+\section{Plan}
 
- ayant pour propriété, pour une nouvelle paire de test (X_test,Y_test) sim P_ksi Y
+ **introduction : pq prediction conforme, c'est quoi la pred conforme  ( problematique quoi)
+ **thoereme : def + th 
+ ** reg lineaire  : applicationb + pseudo code + figure  + limitations 
+ ** classification : applicationb + pseudo code + figure + limitations 
+ ** conclusion avantages incovenients
+ ** annnexe  : demo prediction confirme 
 
- C(X_test) = {y appartenant \mathcal{Y}, s(X_test,y)< q}
- 
- 
+\section{Résultat de la prédiction conforme générale}
 
- on a donc 
- probabilité({Y_test appartient à C chapeau(X_test)}) >= 1-alpha
+Théorème : Soient, pour $i = 1, \dots, n$, des couples de variables aléatoires $(X_i, Y_i) \sim P_{\mathcal{X} \mathcal{Y}}$, indépendants et identiquement distribués, à valeurs dans $\mathcal{X} \times \mathcal{Y}$. On fixe un niveau d'erreur $\alpha \in (0,1)$.
 
+On souhaite construire une fonction prédictive conforme :
+\[
+\hat{C}_n : \mathcal{X} \rightarrow \left\{ \text{sous-ensembles de } \mathcal{Y} \right\}
+\]
+ayant la propriété suivante : pour une nouvelle paire test $(X_{\text{test}}, Y_{\text{test}}) \sim P_{\mathcal{X} \mathcal{Y}}$,
 
- 
- On définit alors les scores de cal
- * q le ⌈(n+1)(1−α)⌉quantile des scores de calibration s1 = s(X1, Y1), ..., sn = s(Xn, Yn)
+\[
+\hat{C}_n(X_{\text{test}}) = \left\{ y \in \mathcal{Y} : s(X_{\text{test}}, y) \leq \hat{q} \right\},
+\]
+
+où $s$ est une fonction de non-conformité, et $\hat{q}$ est un seuil déterminé à partir des données de calibration.
+
+Alors, la prédiction conforme garantit :
+\[
+\mathbb{P}\left( Y_{\text{test}} \in \hat{C}_n(X_{\text{test}}) \right) \geq 1 - \alpha.
+\]
+
+\vspace{0.5em}
+On définit alors :
+\begin{itemize}
+    \item Les scores de calibration : $s_i = s(X_i, Y_i)$ pour $i = 1, \dots, n$ ;
+    \item Le seuil $\hat{q}$ comme le quantile d'ordre $\left\lceil (n+1)(1 - \alpha) \right\rceil$ des scores $\{s_i\}$.
+\end{itemize}
+
 
 \section{Fonction score $s$} 
 
