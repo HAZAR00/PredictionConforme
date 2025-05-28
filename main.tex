@@ -23,13 +23,15 @@
 \linenumbers
 \maketitle
 
+\section{Abstract}
+Ce rapport présente les fondements théoriques de la prédiction conforme et démontre son application pratique sur des tâches de régression et classification, avec implémentations et analyses de performance.
+
 \section{Introduction}
 
 L'apprentissage automatique moderne produit des prédictions ponctuelles sans indication de leur fiabilité. Cette limitation devient critique dans des domaines sensibles comme la médecine, la finance ou les véhicules autonomes, où connaître l'incertitude d'une prédiction est aussi important que la prédiction elle-même.
 
 La \textbf{prédiction conforme} répond à cette problématique en transformant toute prédiction ponctuelle en ensemble de prédictions avec garantie de couverture probabiliste. Contrairement aux approches bayésiennes qui nécessitent des hypothèses distributionnelles fortes, la prédiction conforme fonctionne sous des hypothèses minimales d'échangeabilité et est \textit{distribution-free}.
 
-\textbf{Objectif} : Ce rapport présente les fondements théoriques de la prédiction conforme et démontre son application pratique sur des tâches de régression et classification, avec implémentations et analyses de performance.
 
 \section{Fondements Théoriques}
 
@@ -68,8 +70,19 @@ Cette garantie est \textbf{indépéndante de la distribution} : elle ne dépend 
 
 Dans le cadre de la prédiction conforme en régression, nous transformons les prédictions ponctuelles en intervalles avec garanties statistiques.\\
 
-\textbf{Fonction de score} : Nous utilisons les \textbf{résidus absolus} :
-$$s(x, y) = |y - \hat{f}(x)|$$
+\textbf{Fonction de score} : Nous utilisons les \textbf{résidus absolus} : 
+
+
+\[
+s : \quad
+\left\{
+\begin{array}{l}
+\mathbb{R} \times \mathbb{R} \to \mathbb{R} \\
+(x, y) \mapsto | y - \hat{f}(x) |
+\end{array}
+\right.
+\]
+
 
 Cette fonction mesure la non-conformité entre la valeur observée $y$ et la prédiction $\hat{f}(x)$. Elle présente l'avantage d'être simple, et compatible avec tout modèle de régression.
 
@@ -310,4 +323,4 @@ La prédiction conforme constitue un outil puissant pour quantifier l'incertitud
 
 La prédiction conforme ouvre la voie vers des systèmes d'IA plus fiables et transparents, essentiels pour l'adoption de l'apprentissage automatique dans des domaines critiques.
 
-N\end{document}
+\end{document}
